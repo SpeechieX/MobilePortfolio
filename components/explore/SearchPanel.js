@@ -1,17 +1,32 @@
-import {View, Text, TextInput, StyleSheet} from 'react-native';
+import {View, Text, TextInput, StyleSheet, Dimensions} from 'react-native';
 import React from 'react';
+
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 // Custom TextInput with Search Icon
 // Custom Validation
 // Keyword Grabber
+const width = Dimensions.get('window').width;
+
+console.log('width ', width);
 
 const SearchPanel = () => {
   return (
-    <View>
+    <View style={styles.searchBar}>
+      <AntDesign
+        name="search1"
+        style={{
+          color: '#252525',
+          fontSize: 20,
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 10,
+        }}
+      />
       <TextInput
         style={styles.searchForm}
         placeholder={'Search Anything...'}
-        placeholderTextColor={'#fff'}
+        placeholderTextColor={'#252525'}
         selectionColor={'limegreen'}
       />
     </View>
@@ -19,20 +34,33 @@ const SearchPanel = () => {
 };
 
 const styles = StyleSheet.create({
+  searchBar: {
+    flexDirection: 'row',
+
+    borderWidth: 1,
+    borderColor: 'lightgrey',
+    paddingLeft: 40,
+    width: width * 0.68,
+    backgroundColor: 'lightgrey',
+    borderRadius: 12.5,
+
+    overflowX: 'none',
+  },
   searchForm: {
     height: 40,
-    width: 300,
+    width: width * 0.5,
     borderWidth: 1,
-    borderRadius: 3,
+    borderColor: '#ffffff00',
+
     textShadowColor: 'white',
-    textShadowRadius: 2,
-    backgroundColor: 'black',
-    color: 'white',
-    paddingLeft: 20,
-    paddingRight: 4,
-    paddingTop: 4,
-    paddingBottom: 4,
-    fontFamily: 'courier',
+    textShadowRadius: 1,
+
+    color: '#252525',
+
+    backgroundColor: 'lightgrey',
+    padding: 10,
+
+    fontFamily: 'helvetica',
   },
 });
 

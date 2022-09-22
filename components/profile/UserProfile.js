@@ -28,16 +28,7 @@ const UserProfile = () => {
         <ProfilePhoto />
       </View>
       <FollowButton />
-      <TouchableOpacity
-        style={{
-          height: 60,
-          width: 200,
-          backgroundColor: 'red',
-          justifyContent: 'center',
-          alignItems: 'center',
-          alignSelf: 'center',
-        }}
-        onPress={handleLogout}>
+      <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
         <Text>Logout</Text>
       </TouchableOpacity>
     </SafeAreaView>
@@ -54,6 +45,21 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ccc',
     flexDirection: 'row',
+  },
+  logoutButton: {
+    height: 35,
+    width: 200,
+    backgroundColor: 'transparent',
+    borderColor: '#252525',
+    borderWidth: 3,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+
+    borderRadius: 12.5,
+
+    marginBottom: 10,
+    marginTop: 10,
   },
 });
 

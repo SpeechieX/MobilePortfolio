@@ -9,6 +9,8 @@ import Dashboard from '../dashboard/Dashboard';
 import Explore from '../explore/Explore';
 import Pager from '../pager/Pager';
 
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 const Tab = createBottomTabNavigator();
 
 const UserBottomTabs = () => {
@@ -19,20 +21,43 @@ const UserBottomTabs = () => {
         component={Dashboard}
         options={{
           headerTitle: '',
+          tabBarIcon: () => (
+            <AntDesign
+              name="home"
+              style={{
+                color: '#000',
+                fontSize: 25,
+                marginLeft: 5,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 6,
+              }}
+            />
+          ),
           headerLeft: () => (
-            <Button
-              onPress={() => alert('This is a button!')}
-              title="My Menu"
-              color="#000"
-              style={styles.headerLeftButton}
+            <AntDesign
+              name="menu-unfold"
+              style={{
+                color: '#000',
+                fontSize: 25,
+                marginLeft: 5,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 6,
+              }}
             />
           ),
           headerRight: () => (
-            <Button
-              onPress={() => alert('This is a button!')}
-              title="Inbox"
-              color="#000"
-              style={styles.headerRightButton}
+            <AntDesign
+              name="inbox"
+              style={{
+                color: '#000',
+                fontSize: 25,
+                marginLeft: 5,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 6,
+              }}
             />
           ),
         }}
@@ -42,6 +67,19 @@ const UserBottomTabs = () => {
         component={Explore}
         options={{
           headerShown: false,
+          tabBarIcon: () => (
+            <AntDesign
+              name="earth"
+              style={{
+                color: '#000',
+                fontSize: 25,
+                marginLeft: 5,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 6,
+              }}
+            />
+          ),
         }}
       />
       <Tab.Screen
@@ -49,6 +87,19 @@ const UserBottomTabs = () => {
         component={Pager}
         options={{
           headerShown: false,
+          tabBarIcon: () => (
+            <AntDesign
+              name="notification"
+              style={{
+                color: '#000',
+                fontSize: 25,
+                marginLeft: 5,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 6,
+              }}
+            />
+          ),
         }}
       />
       <Tab.Screen
@@ -56,6 +107,19 @@ const UserBottomTabs = () => {
         component={Activity}
         options={{
           headerShown: false,
+          tabBarIcon: () => (
+            <AntDesign
+              name="dotchart"
+              style={{
+                color: '#000',
+                fontSize: 25,
+                marginLeft: 5,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 6,
+              }}
+            />
+          ),
         }}
       />
       <Tab.Screen
@@ -63,6 +127,19 @@ const UserBottomTabs = () => {
         component={UserProfile}
         options={{
           headerShown: false,
+          tabBarIcon: () => (
+            <AntDesign
+              name="star"
+              style={{
+                color: '#000',
+                fontSize: 25,
+                marginLeft: 5,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 6,
+              }}
+            />
+          ),
         }}
       />
     </Tab.Navigator>

@@ -3,6 +3,7 @@ import SearchPanel from './SearchPanel';
 import SuggestedPost from './SuggestedPost';
 import React from 'react';
 
+import AntDesign from 'react-native-vector-icons/AntDesign';
 const Explore = () => {
   return (
     <SafeAreaView style={styles.container}>
@@ -17,8 +18,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 3,
-    borderColor: 'red',
   },
 });
 

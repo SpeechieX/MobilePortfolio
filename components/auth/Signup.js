@@ -15,6 +15,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 import {requestLogin, userSuccess} from '../../redux/actions/userActions';
 
+import AntDesign from 'react-native-vector-icons/AntDesign';
 const Signup = ({navigation}, props) => {
   const dispatch = useDispatch();
   let currentScreen = useSelector(state => state);
@@ -44,13 +45,13 @@ const Signup = ({navigation}, props) => {
           <TextInput
             style={styles.signupForm}
             placeholder={'username'}
-            placeholderTextColor={'#ffffff70'}
+            placeholderTextColor={'#252525'}
           />
           <TextInput
             style={styles.signupForm}
             type
             placeholder={'email'}
-            placeholderTextColor={'#ffffff70'}
+            placeholderTextColor={'#252525'}
             keyboardType={'email-address'}
             spellCheck={false}
             autoCapitalize={'none'}
@@ -59,10 +60,20 @@ const Signup = ({navigation}, props) => {
           <TextInput
             style={styles.signupForm}
             placeholder={'create a password'}
-            placeholderTextColor={'#ffffff70'}
+            placeholderTextColor={'#252525'}
           />
 
           <TouchableOpacity style={styles.signupButton}>
+            <AntDesign
+              name="adduser"
+              style={{
+                color: '#fff',
+                fontSize: 25,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 6,
+              }}
+            />
             <Button
               title={'Sign Up'}
               onPress={handleSignup}
@@ -89,7 +100,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Helvetica',
   },
   signupButton: {
-    backgroundColor: 'chocolate',
+    flexDirection: 'row',
+
+    backgroundColor: '#FF3F4F',
     borderRadius: 12.5,
     paddingLeft: 30,
     paddingRight: 30,
@@ -100,8 +113,8 @@ const styles = StyleSheet.create({
   signupForm: {
     width: 200,
     height: 44,
-    backgroundColor: '#8c8785',
-    borderColor: '#8c8785',
+    backgroundColor: 'lightgrey',
+    borderColor: '#ffbe73',
     borderWidth: 1,
     borderRadius: 12.5,
     color: '#ececec',
@@ -111,7 +124,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Helvetica',
   },
   view: {
-    backgroundColor: '#535353',
+    backgroundColor: '#f87f56',
+    height: '100%',
   },
 });
 

@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: '800',
     textAlign: 'center',
-    borderWidth: 5,
   },
   follow: {
     borderWidth: 1,

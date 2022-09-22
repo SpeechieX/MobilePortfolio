@@ -1,20 +1,20 @@
-import {View, Text, Image, ImageBackground, StyleSheet} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const ProfilePhoto = () => {
+const UserAvatar = () => {
   return <View style={styles.outline} />;
 };
 
+export default UserAvatar;
+
 const styles = StyleSheet.create({
   outline: {
-    height: 80,
-    width: 80,
+    height: 40,
+    width: 40,
     borderRadius: 50,
-    backgroundColor: '#FF3F4F',
+    backgroundColor: '#FF3F9F' || '#0ffccd',
     marginLeft: 15,
     marginRight: 15,
     marginTop: 15,
   },
 });
-
-export default ProfilePhoto;
