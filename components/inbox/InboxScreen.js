@@ -6,6 +6,10 @@ import {
   Dimensions,
   ScrollView,
   TouchableOpacity,
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import React from 'react';
 
@@ -98,6 +102,8 @@ const InboxScreen = () => {
         // options={{headerTitle: props => <LogoTitle {...props} />}}
         options={{headerTitle: '', headerShown: false}}
       />
+
+      {/* There seems to be an issue with the drawer navigation  */}
       <Stack.Screen
         name="MessageView"
         component={MessageView}

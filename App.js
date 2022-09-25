@@ -13,23 +13,18 @@ import {
   Image,
 } from 'react-native';
 
+import {useSelector} from 'react-redux';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import PowerHeader from './components/navigation/PowerHeader';
-
-import UserBottomTabs from './components/navigation/UserBottomTabs';
-import InboxScreen from './components/inbox/InboxScreen';
-
-import {createDrawerNavigator} from '@react-navigation/drawer';
-
-import {useSelector} from 'react-redux';
-
-import Onboarding from './components/auth/Onboarding';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
-const Stack = createNativeStackNavigator();
+import UserBottomTabs from './components/navigation/UserBottomTabs';
+import InboxScreen from './components/inbox/InboxScreen';
+import Onboarding from './components/auth/Onboarding';
 
+const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const HomeScreenMenu = ({navigation}) => {

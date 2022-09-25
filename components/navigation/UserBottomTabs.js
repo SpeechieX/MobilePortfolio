@@ -1,5 +1,5 @@
-import {View, Text, StyleSheet, Button} from 'react-native';
 import React from 'react';
+import {StyleSheet} from 'react-native';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createDrawerNavigator} from '@react-navigation/drawer';
