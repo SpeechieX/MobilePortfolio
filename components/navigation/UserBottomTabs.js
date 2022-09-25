@@ -2,6 +2,7 @@ import {View, Text, StyleSheet, Button} from 'react-native';
 import React from 'react';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import UserProfile from '../profile/UserProfile';
 import Activity from '../notifications/Activity';
@@ -12,8 +13,9 @@ import Pager from '../pager/Pager';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
-const UserBottomTabs = () => {
+const UserBottomTabs = ({navigation}) => {
   return (
     <Tab.Navigator>
       <Tab.Screen
@@ -34,32 +36,32 @@ const UserBottomTabs = () => {
               }}
             />
           ),
-          headerLeft: () => (
-            <AntDesign
-              name="menu-unfold"
-              style={{
-                color: '#000',
-                fontSize: 25,
-                marginLeft: 5,
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginTop: 6,
-              }}
-            />
-          ),
-          headerRight: () => (
-            <AntDesign
-              name="inbox"
-              style={{
-                color: '#000',
-                fontSize: 25,
-                marginLeft: 5,
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginTop: 6,
-              }}
-            />
-          ),
+          // headerLeft: () => (
+          //   <AntDesign
+          //     name="menu-unfold"
+          //     style={{
+          //       color: '#000',
+          //       fontSize: 25,
+          //       marginLeft: 5,
+          //       justifyContent: 'center',
+          //       alignItems: 'center',
+          //       marginTop: 6,
+          //     }}
+          //   />
+          // ),
+          // headerRight: () => (
+          //   <AntDesign
+          //     name="inbox"
+          //     style={{
+          //       color: '#000',
+          //       fontSize: 25,
+          //       marginLeft: 5,
+          //       justifyContent: 'center',
+          //       alignItems: 'center',
+          //       marginTop: 6,
+          //     }}
+          //   />
+          // ),
         }}
       />
       <Tab.Screen

@@ -4,6 +4,7 @@ import {
   View,
   Dimensions,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import React from 'react';
 import UserAvatar from './UserAvatar';
@@ -17,7 +18,10 @@ const SharedAPost = () => {
         <UserAvatar />
         <Text style={styles.alertHeader}>arica123 shared a post</Text>
       </View>
-      <View style={styles.content} />
+      <Image
+        style={styles.content}
+        source={{uri: '../../assets/images/image_01_test.jpg'}}
+      />
     </TouchableOpacity>
   );
 };
@@ -40,8 +44,8 @@ const styles = StyleSheet.create({
     // borderWidth: 1,
     height: 200,
     width: screenWidth * 0.9,
-    backgroundColor: 'black',
     marginTop: 10,
+    borderWidth: 1,
     marginLeft: 10,
     justifyContent: 'center',
     alignItems: 'center',
