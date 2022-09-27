@@ -53,7 +53,7 @@ const App = () => {
               headerTitle: '',
               drawerIcon: () => {
                 <AntDesign
-                  name="inbox"
+                  name="bars"
                   style={{
                     color: '#000',
                     fontSize: 25,
@@ -63,6 +63,16 @@ const App = () => {
                     marginTop: 6,
                   }}
                 />;
+              },
+              drawerActiveBackgroundColor: 'black',
+              drawerLabelStyle: {
+                color: 'white',
+              },
+              drawerInactiveTintColor: 'grey',
+              drawerStatusBarAnimation: 'fade',
+              drawerStyle: {
+                backgroundColor: 'black',
+                color: 'white',
               },
             }}
           />
@@ -84,6 +94,15 @@ const App = () => {
                   }}
                 />;
               },
+              drawerStyle: {
+                backgroundColor: 'black',
+                color: 'white',
+              },
+              drawerInactiveTintColor: 'grey',
+              drawerLabelStyle: {
+                color: 'white',
+              },
+              drawerStatusBarAnimation: 'fade',
             }}
           />
         </Drawer.Navigator>
